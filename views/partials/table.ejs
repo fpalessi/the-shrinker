@@ -1,0 +1,24 @@
+<table class="table table-responsive">
+  <thead class="table-dark">
+    <tr>
+      <th>Full URL</th>
+      <th>Short URL</th>
+      <th>Clicks</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% shortUrls.forEach(shortUrl => { %>
+    <tr>
+      <td>
+        <a href="<%= shortUrl.full %>"><%= shortUrl.full %></a>
+      </td>
+      <td>
+        <a href="<%= shortUrl.short %>" target="_blank" class="js-url-link"
+          ><%= shortUrl.short %></a
+        >
+      </td>
+      <td><%= shortUrl.clicks %></td>
+    </tr>
+    <% }) %>
+  </tbody>
+</table>
